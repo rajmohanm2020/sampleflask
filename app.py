@@ -9,7 +9,7 @@ employees = [
     {"id": 2, "name": "David", "role": "AI Engineer"}
 ]
 
-# GET - Retrieve all employees
+# GET -  Retrieve all employees
 @app.route('/employees', methods=['GET'])
 def get_employees():
     return jsonify(employees), 200
@@ -45,7 +45,7 @@ def create_employee():
     return jsonify(new_employee), 201
 
 
-# PUT -  Update an employee
+# PUT - Update an employee
 @app.route('/employees/<int:emp_id>', methods=['PUT'])
 def update_employee(emp_id):
     employee = next((e for e in employees if e["id"] == emp_id), None)
