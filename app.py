@@ -9,7 +9,7 @@ employees = [
     {"id": 2, "name": "David", "role": "AI Engineer"}
 ]
 
-# GET -    Retrieve all employees
+# GET -  Retrieve all employees
 @app.route('/employees', methods=['GET'])
 def get_employees():
     return jsonify(employees), 200
